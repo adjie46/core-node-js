@@ -73,7 +73,7 @@ exports.dashboard_pages = async (req, res) => {
 		showJs = `admin/no_item`;
 	}
 
-	var _ = require("underscore");
+	/* var _ = require("underscore");
 	var pray_time = await library.prayer_time();
 	var pray = JSON.parse(pray_time);
 	var filtered = _.where(pray, { date: library.currentDate() });
@@ -97,7 +97,7 @@ exports.dashboard_pages = async (req, res) => {
 		}
 	});
 
-	dataDashboard.pray_time = waktu_sahalat;
+	dataDashboard.pray_time = waktu_sahalat; */
 
 	return res.render("pages/admin/dashboard", {
 		csrfToken: req.csrfToken(),

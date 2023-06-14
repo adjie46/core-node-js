@@ -16,7 +16,13 @@
     <div class="page-wrapper" id="main-wrapper" data-theme="blue_theme" data-layout="vertical" data-sidebartype="full"
         data-sidebar-position="fixed" data-header-position="fixed">
         <!-- Sidebar Start -->
-        {{> admin/includes/asside_menu}}
+        {{#ifEquals datas.users.user_type "-1"}}
+        {{> admin/includes/menu_admin}}
+        {{else ifEquals datas.users.user_type "1"}}
+        {{> admin/includes/menu_operator}}
+        {{else ifEquals datas.users.user_type "3"}}
+        {{> admin/includes/menu_user}}
+        {{/ifEquals}}
         <!--  Sidebar End -->
         <!--  Main wrapper -->
         <div class="body-wrapper">

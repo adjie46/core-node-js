@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <img src="/dist/images/logos/favicon.svg" alt="loader" class="lds-ripple img-fluid" />
+    </div>
+    <!-- Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="horizontal" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed">
+        <div class="position-relative overflow-hidden radial-gradient min-vh-100">
+            <div class="position-relative z-index-5">
+                <div class="row">
+                    <div class="col-xl-7 col-xxl-8">
+                        <a href="/login" class="text-nowrap logo-img d-block px-4 py-9 w-100">
+                            <img src="/dist/images/backgrounds/logo_pemda.png" width="280" alt="">
+                        </a>
+                        <div class="d-none d-xl-flex" style="height: calc(100vh - 80px);">
+                            <a target="_blank"
+                                href="https://play.google.com/store/apps/details?id=com.kominfoatam.signalapps"><img
+                                    src="/dist/images/backgrounds/bg_login.png" alt="" class="img-fluid"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-xxl-4">
+                        <div
+                            class="authentication-login min-vh-100 bg-body row justify-content-center align-items-center p-4">
+
+                            <div class="col-sm-8 col-md-6 col-xl-9">
+                                <h2 class="mb-3 fs-7 fw-bolder">Signal V.2.0 - Aplikasi Manajemen Tanda Tangan
+                                    Elektronik
+                                    Kab. Aceh Tamiang</h2>
+                                <p class=" mb-9">Silahkan Masukkan NIP atau Username dan Password Untuk Melanjutkan</p>
+                                <div id="notification"></div>
+                                <form id="frm_login" action="#" method="post" novalidate="novalidate">
+                                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                                    <div class="mb-3">
+                                        <label for="username_login" class="form-label">NIP/Username</label>
+                                        <input type="email" class="form-control" id="username_login"
+                                            name="username_login" aria-describedby="emailHelp"
+                                            placeholder="NIP Pegawai / Username" required>
+                                        <div class="invalid-feedback">
+                                            NIP/username Tidak Boleh Kosong
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="password_login" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password_login"
+                                            placeholder="Password" required name="password_login">
+                                        <div class="invalid-feedback">
+                                            Passwod Tidak Boleh Kosong
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <div class="form-check">
+
+                                        </div>
+                                        <a class="text-primary fw-medium" data-bs-toggle="modal"
+                                            data-bs-target="#bs-example-modal-md" href="#">Lupa Password
+                                            ?</a>
+                                    </div>
+                                    <button id="btn_loading" type="submit"
+                                        class="btn btn-primary w-100 py-8 mb-4 rounded-2">MASUK</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{> js}}
+    <script src="/dist/js/custom/auth/login.js"></script>
+
+    <div id="bs-example-modal-md" class="modal fade" tabindex="-1" aria-labelledby="bs-example-modal-md"
+        aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-flex align-items-center">
+                    <h4 class="modal-title" id="myModalLabel">
+                        Tata Cara Proses Lupa Password
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Untuk Melakukan Reset atau Lupa Password Akun Signal V.2.0.
+                        Silahkan Hubungi Admin Signal TTE - Aceh Tamiang Melalui Tombol Dibawah ini
+                    </p>
+                    <p>
+                    <div class="row button-group">
+                        <div class="col-lg-12">
+                            <a href="https://wa.me/628126333698"><button type="button"
+                                    class="justify-content-center w-100 btn mb-1 btn-rounded btn-outline-primary d-flex align-items-center">
+                                    <i class="ti ti-brand-whatsapp fs-4 me-2"></i>
+                                    Whatsapp - Aleka Saputra
+                                </button></a>
+                            <a href="https://wa.me/6282366833180"><button type="button"
+                                    class="justify-content-center w-100 btn mb-1 btn-rounded btn-outline-secondary d-flex align-items-center">
+                                    <i class="ti ti-brand-whatsapp fs-4 me-2"></i>
+                                    Whatsapp - Revi Rinaldi
+                                </button></a>
+                            <a href="https://wa.me/6281269494591"><button type="button"
+                                    class="justify-content-center w-100 btn mb-1 btn-rounded btn-outline-success d-flex align-items-center">
+                                    <i class="ti ti-brand-whatsapp fs-4 me-2"></i>
+                                    Whatsapp - Adjie Kurniawan
+                                </button></a>
+                            <a href="https://wa.me/6285359657086"><button type="button"
+                                    class="justify-content-center w-100 btn mb-1 btn-rounded btn-outline-info d-flex align-items-center">
+                                    <i class="ti ti-brand-whatsapp fs-4 me-2"></i>
+                                    Whatsapp - Muhammad Zulfat Akbar
+                                </button></a>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light-danger text-danger font-medium waves-effect"
+                        data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</body>
+
+</html>

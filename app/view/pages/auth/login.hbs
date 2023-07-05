@@ -16,12 +16,13 @@
                 <div class="row">
                     <div class="col-xl-7 col-xxl-8">
                         <a href="/login" class="text-nowrap logo-img d-block px-4 py-9 w-100">
-                            <img src="/dist/images/backgrounds/logo_pemda.png" width="280" alt="">
+                            <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/dark-logo.svg"
+                                width="180" alt="">
                         </a>
-                        <div class="d-none d-xl-flex" style="height: calc(100vh - 80px);">
-                            <a target="_blank"
-                                href="https://play.google.com/store/apps/details?id=com.kominfoatam.signalapps"><img
-                                    src="/dist/images/backgrounds/bg_login.png" alt="" class="img-fluid"></a>
+                        <div class="d-none d-xl-flex align-items-center justify-content-center"
+                            style="height: calc(100vh - 80px);">
+                            <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/backgrounds/login-security.svg"
+                                alt="" class="img-fluid" width="500">
                         </div>
                     </div>
                     <div class="col-xl-5 col-xxl-4">
@@ -29,10 +30,8 @@
                             class="authentication-login min-vh-100 bg-body row justify-content-center align-items-center p-4">
 
                             <div class="col-sm-8 col-md-6 col-xl-9">
-                                <h2 class="mb-3 fs-7 fw-bolder">Signal V.2.0 - Aplikasi Manajemen Tanda Tangan
-                                    Elektronik
-                                    Kab. Aceh Tamiang</h2>
-                                <p class=" mb-9">Silahkan Masukkan NIP atau Username dan Password Untuk Melanjutkan</p>
+                                <h2 class="mb-3 fs-7 fw-bolder">{{web_title}}</h2>
+                                <p class=" mb-9">Silahkan Masukkan Username dan Password Untuk Melanjutkan</p>
                                 <div id="notification"></div>
                                 <form id="frm_login" action="#" method="post" novalidate="novalidate">
                                     <input type="hidden" name="_csrf" value="{{csrfToken}}">
